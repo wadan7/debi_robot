@@ -1,0 +1,16 @@
+# Publish all joint states -----------------------------------
+joint_state_controller:
+  type: joint_state_controller/JointStateController
+  publish_rate: 50
+
+# Position Controllers ---------------------------------------
+right_hand_controller:
+  type: position_controllers/JointPositionController
+  joint: crab_hand_R_joint
+  pid: {p: 5000, i: 200, d: 500}
+
+left_hand_controller:
+  type: position_controllers/JointPositionController
+  joint: crab_hand_L_joint
+  pid: {p: 5000, i: 200, d: 500}
+
